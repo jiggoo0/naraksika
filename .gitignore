@@ -30,3 +30,4 @@ dist-ssr
 
 # Ignore generated JS files inside src (if any)
 src/**/*.js
+.vercel
