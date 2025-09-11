@@ -1,0 +1,99 @@
+/* =========================
+   Global Base
+   ========================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   HTML & Body Defaults
+   ========================= */
+html,
+body {
+  @apply bg-background text-neutral-dark font-sans antialiased;
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   Headings
+   ========================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display text-neutral-dark tracking-tight;
+  margin: 0;
+}
+
+/* =========================
+   Links
+   ========================= */
+a {
+  @apply text-primary hover:text-primary-dark transition-colors duration-200;
+  text-decoration: none;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+button {
+  @apply font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded;
+  cursor: pointer;
+}
+
+/* =========================
+   Forms (Input, Textarea, Select)
+   ========================= */
+input,
+textarea,
+select {
+  @apply bg-white border border-gray-300 rounded px-4 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary;
+}
+
+/* Autofill Fix */
+input:-webkit-autofill {
+  @apply shadow-inner;
+  box-shadow: 0 0 0px 1000px white inset;
+}
+
+/* =========================
+   Section Utility (spacing + scroll offset)
+   ========================= */
+section {
+  @apply scroll-mt-24 py-24;
+}
+
+/* =========================
+   Dark Mode
+   ========================= */
+.dark body {
+  @apply bg-neutral-dark text-neutral-light;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  @apply text-neutral-light;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  @apply bg-neutral-dark border-gray-600 text-neutral-light placeholder-gray-400;
+}
+
+.dark a {
+  @apply text-primary hover:text-primary-dark;
+}
+
+.dark button {
+  @apply focus:ring-offset-neutral-dark;
+}
